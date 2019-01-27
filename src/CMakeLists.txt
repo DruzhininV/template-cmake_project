@@ -1,9 +1,11 @@
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_library(${PROJECT_NAME} "")
+add_subdirectory(include)
 
 target_sources(${PROJECT_NAME}
     PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}/main.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/sphere.h
+        ${CMAKE_CURRENT_LIST_DIR}/sphere.cpp
     )
 
 target_link_libraries(${PROJECT_NAME}
