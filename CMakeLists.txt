@@ -13,6 +13,9 @@ conan_check(VERSION 1.0.0 REQUIRED)
 conan_add_remote(NAME bincrafters
     URL https://api.bintray.com/conan/bincrafters/public-conan
     )
+conan_add_remote(NAME conan-mpusz
+    URL https://api.bintray.com/conan/mpusz/conan-mpusz
+    )
 
 conan_cmake_run(CONANFILE conanfile.txt
     BASIC_SETUP CMAKE_TARGETS
@@ -21,10 +24,12 @@ conan_cmake_run(CONANFILE conanfile.txt
 
 find_package(GTest REQUIRED)
 find_package(GMock REQUIRED)
+find_package(benchmark REQUIRED)
 
 
 add_subdirectory(src)
 add_subdirectory(tests)
+add_subdirectory(benchmarks)
 
 
 install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}Targets
