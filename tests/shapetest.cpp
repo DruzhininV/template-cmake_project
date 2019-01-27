@@ -5,10 +5,6 @@
 #include <gmock/gmock.h>
 #include "shape.h"
 
-TEST(Test, test1) {
-    ASSERT_TRUE(true);
-}
-
 TEST(ShapeTest, SphereTest){
     using namespace std::string_literals;
     auto shape = lib::make_sphere();

@@ -1,5 +1,5 @@
 
-add_executable(tests testmain.cpp)
+add_executable(tests shapetest.cpp)
 
 target_sources(tests
     PRIVATE
