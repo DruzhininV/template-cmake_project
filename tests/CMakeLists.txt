@@ -12,6 +12,7 @@ target_link_libraries(tests
         GTest::Main
         GMock::GMock
         GMock::Main
+        ${PROJECT_NAME}
     )
 
 enable_testing()

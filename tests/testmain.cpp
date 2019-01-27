@@ -3,9 +3,16 @@
 //
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
+#include "shape.h"
 
 TEST(Test, test1) {
     ASSERT_TRUE(true);
+}
+
+TEST(ShapeTest, SphereTest){
+    using namespace std::string_literals;
+    auto shape = lib::make_sphere();
+    ASSERT_EQ(shape->print(), "Sphere"s);
 }
 //int main(int argc, char** argv) {
 //    ::testing::InitGoogleTest(&argc, argv);
