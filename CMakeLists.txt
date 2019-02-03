@@ -22,11 +22,6 @@ conan_cmake_run(CONANFILE conanfile.txt
     BUILD missing
     )
 
-find_package(GTest REQUIRED)
-find_package(GMock REQUIRED)
-find_package(benchmark REQUIRED)
-
-
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(benchmarks)
